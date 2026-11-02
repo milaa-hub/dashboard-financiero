@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dashboard Financiero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dashboard Financiero</h1>
+        <p>Consulta de cotizaciones y conversor de divisas</p>
+    </header>
+
+
+    <main>
+
+        <section class="estado">
+            <p id="estadoConexion">🟢 Conectado</p>
+        </section>
+
+
+        <section class="cotizaciones">
+
+            <div class="titulo-seccion">
+                <h2>Cotizaciones</h2>
+
+                <button id="btnActualizar">
+                    Actualizar
+                </button>
+            </div>
+
+            <p id="mensajeCarga" class="oculto">
+                Cargando cotizaciones...
+            </p>
+
+            <p id="mensajeError" class="error oculto"></p>
+
+            <div id="contenedorCotizaciones" class="grid-cotizaciones">
+            </div>
+
+            <p id="ultimaActualizacion"></p>
+
+        </section>
+
+
+        <section class="conversor">
+
+            <h2>Conversor de divisas</h2>
+
+            <div class="formulario">
+
+                <label for="cantidad">
+                    Cantidad
+                </label>
+
+                <input
+                    type="number"
+                    id="cantidad"
+                    placeholder="Ej: 10000"
+                >
+
+
+                <label for="monedaOrigen">
+                    Convertir desde
+                </label>
+
+                <select id="monedaOrigen">
+                    <option value="ARS">Pesos argentinos</option>
+                    <option value="USD">Dólares</option>
+                </select>
+
+
+                <label for="tipoCambio">
+                    Tipo de cambio
+                </label>
+
+                <select id="tipoCambio">
+                    <option value="blue">Dólar Blue</option>
+                    <option value="oficial">Dólar Oficial</option>
+                    <option value="ARS">Pesos argentinos</option>
+                </select>
+
+
+                <button id="btnConvertir">
+                    Convertir
+                </button>
+
+            </div>
+
+
+            <div class="resultado">
+
+                <p>Resultado:</p>
+
+                <h3 id="resultado">
+                    -
+                </h3>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Dashboard Financiero Personal</p>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
